@@ -9,4 +9,5 @@ cat advice.json | jq -r .slip.advice > advice.message
 
 # Deploy
 sudo apt-get install cowsay -y
+export PATH="$PATH:/usr/games:/usr/local/games"
 cat advice.message | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n 1)
